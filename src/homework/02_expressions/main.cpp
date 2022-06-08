@@ -1,5 +1,6 @@
 ﻿//write include statements
 #include "hwexpressions.h"
+#include "hwexpressions.cpp"
 #include <iostream>
 
 //write namespace using statement for cout
@@ -22,12 +23,12 @@ int main()
 	cout<<"How much do you want to tip";
 	cin>>tip_rate;
 	tip_amount = (get_tip_amount(meal_amount,tip_rate));
-	full_meal_cost = (tip_amount + tax_amount + meal_amount);
+	total = (tip_amount + tax_amount + meal_amount);
 	cout<<"The final cost of the meal with tip: ";
 	cout<<"Meal Amount:"<<"\t"<<meal_amount<<"\n";
 	cout<<"Sales Tax:"<<"\t"<<tax_amount<<"\n";
 	cout<<"Tip Amount:"<<"\t"<<tip_amount<<"\n";
-	cout<<"Total:"<<"\t"<<full_meal_cost<<"\n";
+	cout<<"Total:"<<"\t"<<total<<"\n";
 
 
 
