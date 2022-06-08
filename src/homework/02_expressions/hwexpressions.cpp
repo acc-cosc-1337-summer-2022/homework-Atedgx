@@ -1,6 +1,5 @@
 #include "hwexpressions.h"
 
-//example
 const double tax_rate = 0.0675;
 double get_sales_tax_amount(double meal_amount)
 {
@@ -11,10 +10,8 @@ double get_sales_tax_amount(double meal_amount)
 
 double get_tip_amount(double meal_amount, double tip_rate)
 {
-    double tip_rate_product = meal_amount * tip_rate;
+    double tip_rate_product = meal_amount * (tip_rate/100);
     return tip_rate_product;
 };
-
-
 
 
