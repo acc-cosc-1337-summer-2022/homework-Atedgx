@@ -10,7 +10,7 @@ double get_sales_tax_amount(double meal_amount)
 
 double get_tip_amount(double meal_amount, double tip_rate)
 {
-    double tip_rate_product = meal_amount * (tip_rate/100);
+    double tip_rate_product = (tip_rate * meal_amount);
     return tip_rate_product;
 };
 
