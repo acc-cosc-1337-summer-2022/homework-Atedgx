@@ -20,10 +20,10 @@ int main()
     total = (tip_amount + tax_amount + meal_amount);
 	tip_amount = tip_amount;
     cout<<"The final cost of the meal with tip: ";
-    cout<<"Meal Amount:"<<"\t"<<meal_amount<<"\n";
-    cout<<"Sales Tax:"<<"\t"<<tax_amount<<"\n";
+    cout<<"Meal Amount: "<<"\t"<<meal_amount<<"\n";
+    cout<<"Sales Tax: "<<"\t"<<tax_amount<<"\n";
     cout<<"Tip percent was: "<<"\t"<<tip_amount<<"\n";
-    cout<<"Total:"<<"\t"<<total<<"\n";
+    cout<<"Total: "<<"\t"<<total<<"\n";
 
 
 
