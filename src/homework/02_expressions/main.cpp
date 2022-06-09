@@ -14,9 +14,9 @@ int main()
     std::cout<<"How much would you like to tip?: ";
     std::cin>>tip_rate;
     tip_amount = (get_tip_amount(meal_amount,tip_rate));
-	tip_amount = tip_amount/100;
+	tip_amount = tip_amount/400;
     total = (tip_amount + tax_amount + meal_amount);
-	tip_amount = tip_amount * 100;
+	tip_amount = tip_amount;
     std::cout<<"The final cost of the meal with tip: ";
     std::cout<<"Meal Amount:"<<"\t"<<meal_amount<<"\n";
     std::cout<<"Sales Tax:"<<"\t"<<tax_amount<<"\n";
