@@ -8,7 +8,7 @@
 //return "Baby boomer" when year greater than equal to 1946 to 1964
 //return "Silent Generation" when year greater than equal 1925 and less than equal 1945
 //return "Invalid Year" otherwise
-std:: string get_generationn(int year);
+string get_generation(int year)
 {
     std::string generation;
     if(year >= 1996 && year <= 2014)

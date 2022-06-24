@@ -16,7 +16,7 @@ int main()
 	cin>>year;
 
 	auto result = get_generation(year);
-	cout<<"Generation is "<<result<<"\n"
+	cout<<"Generation is "<<result<<"\n";
 	
 	return 0;
 }
