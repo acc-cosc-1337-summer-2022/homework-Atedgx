@@ -18,11 +18,15 @@ int main()
 	do{
 		cout<<"Enter first player (X/O)"<<"\n";
 		getline(cin, first_player);
-		game.start_game(first_player);
-		
-		
-		
+		if(first_player != "X" && first_player != "O"){
+			while(first_player != "X" && first_player != "O"){
+				cout<<"You did not enter a valid character\n";
+				cout<<"Please reinput an X or an O"<<"\n";
+				cin>>first_player;
+			}
+		}
 
+		game.start_game(first_player);
 
 		int position;
 
