@@ -1,15 +1,21 @@
 //cpp
 #include "tic_tac_toe.h"
 #include <iostream>
+#include <vector>
 
 
 using std::cout;
+using std::cin;
+using std::vector;
+
+
+
 
 bool TicTacToe::game_over(){
     if(check_column_win() == true || check_row_win() == true || check_diagonal_win() == true){
         check_board_full();
         set_winner();
-        return true;
+        return check_board_full();
     }
     else if(check_column_win() == true && check_row_win() != true && check_diagonal_win() != true){
         winner = "C";
@@ -18,7 +24,7 @@ bool TicTacToe::game_over(){
     }
     
     else return check_board_full();
-return 0;
+return check_board_full();
 }
 
 void TicTacToe::start_game(std::string first_player){
@@ -30,17 +36,30 @@ void TicTacToe::start_game(std::string first_player){
 }
 
 void TicTacToe::mark_board(int position){
+    if(pegs.size() == 9){
+        pegs[position-1] = player;
+        set_next_player();}
+    else if(pegs.size() == 16){
+        pegs[position-1] = player;
+        set_next_player();}
+    }
 
-    pegs[position-1] = player;
-    set_next_player();
-}
 
 void TicTacToe::display_board() const{
+
+    if(pegs.size() == 9 ){
 
     for(long unsigned int i=0; i < pegs.size(); i += 3){
 
         cout<<pegs[i]<<"|"<<pegs[i+1]<<"|"<<pegs[i+2]<<"\n";
-    }
+    }}
+
+    else if(pegs.size() == 16){
+
+    for(long unsigned int i=0; i < pegs.size(); i += 4){
+
+        cout<<pegs[i]<<"|"<<pegs[i+1]<<"|"<<pegs[i+2]<<"|"<<pegs[i+3]<<"\n";
+    }}
 }
 
 string TicTacToe::get_winner(){
@@ -77,11 +96,21 @@ bool TicTacToe::check_board_full(){
 
             return false;
         }
+        else return true;
     }
-
-    return true;
-
+return true;
 }
+int TicTacToe::check_board_position(int p){
+    int new_position;
+    for(long unsigned int i=0; i< pegs.size(); i++){
+    if(pegs[p] != " "){
+        cout<<"You did not enter a valid position"<<"\n";
+        cout<<"Please enter a valid position now"<<"\n";
+        cin>>new_position;
+        return new_position;}
+    else return p;
+    }return 0;}
+
 
 bool TicTacToe::check_column_win(){
     for(long unsigned int i=0; i <pegs.size(); i++){
@@ -142,7 +171,7 @@ bool TicTacToe::check_row_win(){
     return false;
 }return 0;}
 
-    bool TicTacToe::check_diagonal_win(){
+bool TicTacToe::check_diagonal_win(){
     
     for(long unsigned int i=0; i <pegs.size(); i++){
 
